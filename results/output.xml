@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.3 on linux)" generated="2025-05-20T10:50:36.308508" rpa="false" schemaversion="5">
-<suite id="s1" name="Zoodex-Prime-Automation-Test" source="/home/bigreza/Documents/Projects/zoodex-prime-automation-test">
-<suite id="s1-s1" name="Tests" source="/home/bigreza/Documents/Projects/zoodex-prime-automation-test/tests">
-<suite id="s1-s1-s1" name="Init" source="/home/bigreza/Documents/Projects/zoodex-prime-automation-test/tests/init.robot">
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-21T09:14:31.650271" rpa="false" schemaversion="5">
+<suite id="s1" name="Zoodex-Automation-Test" source="C:\Users\MatinRK\Documents\Projects\zoodex-automation-test">
+<suite id="s1-s1" name="Tests" source="C:\Users\MatinRK\Documents\Projects\zoodex-automation-test\tests">
+<suite id="s1-s1-s1" name="Init" source="C:\Users\MatinRK\Documents\Projects\zoodex-automation-test\tests\init.robot">
 <test id="s1-s1-s1-t1" name="Open Google Homepage" line="5">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-20T10:50:36.437313" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg time="2025-05-21T09:14:32.051890" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
 <arg>https://www.google.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-20T10:50:36.436952" elapsed="8.863422"/>
+<status status="PASS" start="2025-05-21T09:14:32.051221" elapsed="10.553251"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-05-20T10:50:45.304773" level="INFO">Page title is 'Google'.</msg>
+<msg time="2025-05-21T09:14:42.621416" level="INFO">Page title is 'Google'.</msg>
 <arg>Google</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-05-20T10:50:45.300811" elapsed="0.004150"/>
+<status status="PASS" start="2025-05-21T09:14:42.605358" elapsed="0.016586"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-20T10:50:45.305436" elapsed="0.092135"/>
+<status status="PASS" start="2025-05-21T09:14:42.623053" elapsed="3.280889"/>
 </kw>
-<status status="PASS" start="2025-05-20T10:50:36.436012" elapsed="8.961820"/>
+<status status="PASS" start="2025-05-21T09:14:32.049264" elapsed="13.856617"/>
 </test>
-<status status="PASS" start="2025-05-20T10:50:36.336942" elapsed="9.061627"/>
+<status status="PASS" start="2025-05-21T09:14:31.700122" elapsed="14.212532"/>
 </suite>
-<status status="PASS" start="2025-05-20T10:50:36.335779" elapsed="9.063540"/>
+<status status="PASS" start="2025-05-21T09:14:31.697244" elapsed="14.223085"/>
 </suite>
-<status status="PASS" start="2025-05-20T10:50:36.319495" elapsed="9.080491"/>
+<status status="PASS" start="2025-05-21T09:14:31.663467" elapsed="14.260724"/>
 </suite>
 <statistics>
 <total>
@@ -36,9 +36,9 @@
 <tag>
 </tag>
 <suite>
-<stat name="Zoodex-Prime-Automation-Test" id="s1" pass="1" fail="0" skip="0">Zoodex-Prime-Automation-Test</stat>
-<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Zoodex-Prime-Automation-Test.Tests</stat>
-<stat name="Init" id="s1-s1-s1" pass="1" fail="0" skip="0">Zoodex-Prime-Automation-Test.Tests.Init</stat>
+<stat name="Zoodex-Automation-Test" id="s1" pass="1" fail="0" skip="0">Zoodex-Automation-Test</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Zoodex-Automation-Test.Tests</stat>
+<stat name="Init" id="s1-s1-s1" pass="1" fail="0" skip="0">Zoodex-Automation-Test.Tests.Init</stat>
 </suite>
 </statistics>
 <errors>
