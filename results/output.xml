@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.3 on linux)" generated="2025-05-20T10:50:36.308508" rpa="false" schemaversion="5">
+<suite id="s1" name="Zoodex-Prime-Automation-Test" source="/home/bigreza/Documents/Projects/zoodex-prime-automation-test">
+<suite id="s1-s1" name="Tests" source="/home/bigreza/Documents/Projects/zoodex-prime-automation-test/tests">
+<suite id="s1-s1-s1" name="Init" source="/home/bigreza/Documents/Projects/zoodex-prime-automation-test/tests/init.robot">
+<test id="s1-s1-s1-t1" name="Open Google Homepage" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-20T10:50:36.437313" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-20T10:50:36.436952" elapsed="8.863422"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-20T10:50:45.304773" level="INFO">Page title is 'Google'.</msg>
+<arg>Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-20T10:50:45.300811" elapsed="0.004150"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-20T10:50:45.305436" elapsed="0.092135"/>
+</kw>
+<status status="PASS" start="2025-05-20T10:50:36.436012" elapsed="8.961820"/>
+</test>
+<status status="PASS" start="2025-05-20T10:50:36.336942" elapsed="9.061627"/>
+</suite>
+<status status="PASS" start="2025-05-20T10:50:36.335779" elapsed="9.063540"/>
+</suite>
+<status status="PASS" start="2025-05-20T10:50:36.319495" elapsed="9.080491"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Zoodex-Prime-Automation-Test" id="s1" pass="1" fail="0" skip="0">Zoodex-Prime-Automation-Test</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Zoodex-Prime-Automation-Test.Tests</stat>
+<stat name="Init" id="s1-s1-s1" pass="1" fail="0" skip="0">Zoodex-Prime-Automation-Test.Tests.Init</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
