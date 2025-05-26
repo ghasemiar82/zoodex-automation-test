@@ -1,15 +1,4 @@
-*** Settings ***
-Library           SeleniumLibrary
-Suite Setup       Initialize Browser   
-Test Setup        Go To Zoodex         
-Test Teardown     Capture Page Screenshot  
-Suite Teardown    Close All Browsers
-
 *** Variables ***
-${ZOODEX_URL}    https://zoodex.ir
-${PHONE_NUMBER}    09360343360
-${BROWSER}    chrome
-${timeout}    15s
 ${logo}    id=header-desktop
 ${close_modal_b}      //*[@id="__nuxt"]/div[2]/div/div[4]/div/div[1]/p[1]/img
 ${location_b}    css=[data-test-id="header-address"]
@@ -65,79 +54,21 @@ ${profile}    //*[@id="__nuxt"]/div[2]/div[2]/div/div[5]/div
 ${favorites}    //*[@id="__nuxt"]/div[2]/div/div[3]/div/div[1]/section[3]/a[4]/div
 ${not_have_favorites}    //*[@id="__nuxt"]/div[2]/div/div[3]/div/div[2]/section/div/img
 ${tab_2_favorites}    //*[@id="__nuxt"]/div[2]/div/div[3]/div/div[2]/div/div/div[1]/div[2]
-*** Test Cases ***
-Categories Desktop
-    Sleep     3s
-    Close Desktop Modal
-    Wait Until Element Is Visible    ${category_1}    ${timeout}
-    Click Element    ${category_1}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_2}    ${timeout}
-    Click Element    ${category_2}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_3}    ${timeout}
-    Click Element    ${category_3}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_4}    ${timeout}
-    Click Element    ${category_4}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_5}    ${timeout}
-    Click Element    ${category_5}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_6}    ${timeout}
-    Click Element    ${category_6}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_7}    ${timeout}
-    Click Element    ${category_7}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_8}    ${timeout}
-    Click Element    ${category_8}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_9}    ${timeout}
-    Click Element    ${category_9}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_10}    ${timeout}
-    Click Element    ${category_10}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_11}    ${timeout}
-    Click Element    ${category_11}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_12}    ${timeout}
-    Click Element    ${category_12}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_next_b}    ${timeout}
-    Click Element    ${category_next_b}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_next_b}    ${timeout}
-    Click Element    ${category_next_b}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_13}    ${timeout}
-    Click Element    ${category_13}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_next_b}    ${timeout}
-    Click Element    ${category_next_b}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_next_b}    ${timeout}
-    Click Element    ${category_next_b}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_next_b}    ${timeout}
-    Click Element    ${category_next_b}
-    Sleep    1s
-    Wait Until Element Is Visible    ${category_14}    ${timeout}
-    Click Element    ${category_14}
-    Sleep    1s
-*** Keywords ***
-Initialize Browser
-    Open Browser    ${zoodex_url}    ${browser}
-    Maximize Browser Window
-    Set Selenium Speed    0.2s
-
-Go To Zoodex
-    [Documentation]    Go to zoodex URL and wait for logo
-    Go To    ${zoodex_url}
-    Wait Until Element Is Visible    ${logo}    ${timeout}
-
-Close Desktop Modal
-    [Documentation]    Dismiss any modal or popup that appears on the homepage
-    Wait Until Element Is Visible    ${close_modal_b}    ${timeout}
-    Click Element    ${close_modal_b}
+${pre_order_b}    //*[@id="__nuxt"]/div[2]/div/section/div/div/div[4]/div/div[2]/div[2]/img
+${to_day}    //*[@id="__nuxt"]/div[4]/div/section/div/div[1]
+${tomarow}    //*[@id="__nuxt"]/div[4]/div/section/div/div[2]
+&{t1}    //*[@id="__nuxt"]/div[4]/div/section[2]/div[2]/div[1]/div/label/span
+${t2}    //*[@id="__nuxt"]/div[4]/div/section[2]/div[2]/div[2]/div/label/span
+${t3}    //*[@id="__nuxt"]/div[4]/div/section[2]/div[2]/div[3]/div/label/span
+${t4}    //*[@id="__nuxt"]/div[4]/div/section[2]/div[2]/div[4]/div/label/span
+${submit_pre_order_b}    //*[@id="__nuxt"]/div[4]/div/div[4]/button
+${chelo_zaferani_+}    //*[@id="20833"]/div/div/div[1]/div[2]/div[2]/div[1]
+${pre_order_logo}    //*[@id="__nuxt"]/div[2]/div/section/section/section[2]/div[2]/div[2]/div[1]/img
+${filter_best_selling}    //*[@id="__nuxt"]/div[2]/div/div[4]/div[2]/div[1]/div[2]/div[3]
+${filter_new}    //*[@id="__nuxt"]/div[2]/div/div[4]/div[2]/div[1]/div[2]/div[2]
+${discounted}    //*[@id="__nuxt"]/div[2]/div/div[4]/div[2]/div[1]/div[2]/div[1]
+${all_filters}    //*[@id="__nuxt"]/div[2]/div/div[4]/div[2]/div[1]/div[1]/div[2]/img
+${discounted_b}    //*[@id="__nuxt"]/div[2]/div/div[4]/div/div[3]/div[1]/label/div
+${filter_new_b}    //*[@id="__nuxt"]/div[2]/div/div[4]/div/div[4]/div[1]/label/div
+${filter_best_selling_b}    //*[@id="__nuxt"]/div[2]/div/div[4]/div/div[5]/div/label/div
+${delete_all_filters_b}    //*[@id="__nuxt"]/div[2]/div/div[4]/div/div[6]/button[2]
