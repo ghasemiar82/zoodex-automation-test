@@ -70,3 +70,11 @@ ${discounted_b}    //*[@id="__nuxt"]/div[2]/div[1]/div[15]/div[2]/div/div[3]/div
 ${filter_new_b}    //*[@id="__nuxt"]/div[2]/div[1]/div[15]/div[2]/div/div[3]/div[3]/div[1]/label/div
 ${filter_best_selling_b}    //*[@id="__nuxt"]/div[2]/div[1]/div[15]/div[2]/div/div[3]/div[4]/div/label/div
 ${delete_all_filters_b}    //*[@id="__nuxt"]/div[2]/div[1]/div[15]/div[2]/div/div[3]/div[5]/button[2]
+${search_bar}    //*[@id="__nuxt"]/div[2]/div[1]/div[3]/div[1]/div/input
+${search_bar_2}    //*[@id="undefined"]
+${search_word}    پیتزا
+${first_search_result}    //*[@id="__nuxt"]/div[2]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div[2]/a/div/img
+${back_to_search}    //*[@id="header-copy"]/img
+${search_word_2}    پیتزا سیر استیک
+${first_search_result_2}    //*[@id="img-817108"]/img
+${continue_order_b}    //*[@id="product-detail-back"]/div/div/div[2]/button
