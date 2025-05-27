@@ -120,3 +120,23 @@ ${discounted_vendor_menu}    id=cat-12291
 ${discounted_vendor_add_item}    id=product-add-189956
 ${profile}    id=profile
 ${pre_order_check_box}    //*[@id="__nuxt"]/div[15]/div[2]/div/div[3]/div[1]/div[2]/label[2]
+${first_search_result_2}    //*[@id="img-817108"]/img
+${continue_order_b}    //*[@id="product-detail-back"]/div/div/div[2]/button
+
+#    added by ghasemi
+${kabab_khoran_search_b}    //*[@id="__nuxt"]/div[2]/div[1]/div[10]/div[1]/img
+${kabab_khoran_search_input}    //*[@id="undefined"]
+${kabab_khoran_search_text}    کباب
+${kabab_khoran_search_back}    //*[@id="__nuxt"]/div[2]/div[1]/header/div/div[1]/div/img
+${nav_explore_b}    id=explore
+${first_discount_coupon_b}    //*[@id="discount-0"]/section[1]/button
+${first_discount_coupon_vendor}    //*[@id="discount-0"]/section[2]/a
+${vendor_details_go_back}    id=vendor-details-go-back
+${explore_foodparty_first_item_add}    //*[@id="foodparty-item-0-0"]/div[3]/div/div
+${explore_foodparty_second_item_add}    //*[@id="foodparty-item-0-1"]/div[3]/div/div
+${explore_filter_offers_coupon}    id=explore-filter-discounts
+${explore_filter_foodparty}    id=explore-filter-food_parties
+${explore_filter_offers}    id=explore-filter-zoodex_offers
+${explore_offers_vendor_first}    id=zoodex_offers-0
+${explore_offers_vendor_second}    id=zoodex_offers-1
+

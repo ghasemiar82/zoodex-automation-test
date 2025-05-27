@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.3 on linux)" generated="2025-05-27T09:45:01.902383" rpa="false" schemaversion="5">
+<suite id="s1" name="Zoodex-Prime-Automation-Test" source="/home/bigreza/Documents/Projects/zoodex-prime-automation-test">
+<suite id="s1-s1" name="Tests" source="/home/bigreza/Documents/Projects/zoodex-prime-automation-test/tests">
+<suite id="s1-s1-s1" name="Desktop" source="/home/bigreza/Documents/Projects/zoodex-prime-automation-test/tests/desktop">
+<suite id="s1-s1-s1-s1" name="Vendor Search" source="/home/bigreza/Documents/Projects/zoodex-prime-automation-test/tests/desktop/vendor_search.robot">
+<kw name="Initialize Browser" type="SETUP">
+<msg time="2025-05-27T09:45:02.097171" level="FAIL">No keyword with name 'Initialize Browser' found.</msg>
+<status status="FAIL" start="2025-05-27T09:45:02.097086" elapsed="0.000151">No keyword with name 'Initialize Browser' found.</status>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Vendor Search Desktop" line="10">
+<status status="FAIL" start="2025-05-27T09:45:02.097382" elapsed="0.000370">Parent suite setup failed:
+No keyword with name 'Initialize Browser' found.</status>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-05-27T09:45:02.098518" elapsed="0.000218"/>
+</kw>
+<status status="FAIL" start="2025-05-27T09:45:01.932984" elapsed="0.165815">Suite setup failed:
+No keyword with name 'Initialize Browser' found.</status>
+</suite>
+<status status="FAIL" start="2025-05-27T09:45:01.931480" elapsed="0.167966"/>
+</suite>
+<status status="FAIL" start="2025-05-27T09:45:01.929197" elapsed="0.170706"/>
+</suite>
+<status status="FAIL" start="2025-05-27T09:45:01.903456" elapsed="0.196843"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Zoodex-Prime-Automation-Test" id="s1" pass="0" fail="1" skip="0">Zoodex-Prime-Automation-Test</stat>
+<stat name="Tests" id="s1-s1" pass="0" fail="1" skip="0">Zoodex-Prime-Automation-Test.Tests</stat>
+<stat name="Desktop" id="s1-s1-s1" pass="0" fail="1" skip="0">Zoodex-Prime-Automation-Test.Tests.Desktop</stat>
+<stat name="Vendor Search" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">Zoodex-Prime-Automation-Test.Tests.Desktop.Vendor Search</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-27T09:45:02.093375" level="ERROR">Error in file '/home/bigreza/Documents/Projects/zoodex-prime-automation-test/tests/desktop/vendor_search.robot' on line 3: Resource file '../variables/desktop_variables.robot' does not exist.</msg>
+<msg time="2025-05-27T09:45:02.093605" level="ERROR">Error in file '/home/bigreza/Documents/Projects/zoodex-prime-automation-test/tests/desktop/vendor_search.robot' on line 4: Resource file '../resources/common.robot' does not exist.</msg>
+</errors>
+</robot>
