@@ -10,10 +10,9 @@ Suite Teardown    Close All Browsers
 *** Test Cases ***
 shopping Cart Desktop
     Close Mobile Modal
-    Wait Until Element Is Visible    ${m_category_1}    ${timeout}
-    Click Element    ${m_category_1}
-    Wait Until Element Is Visible    ${m_vendor}    ${timeout}
-    Click Element    ${m_vendor}
+    Execute Javascript    window.scrollBy(0, 500)
+    Wait Until Element Is Visible    ${kabab_khoran}    ${timeout}
+    Click Element    ${kabab_khoran}
     Sleep    2s
     Wait Until Element Is Visible    ${m_menu_1}    ${timeout}
     Click Element    ${m_menu_1}

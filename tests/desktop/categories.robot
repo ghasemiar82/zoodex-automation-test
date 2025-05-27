@@ -52,9 +52,17 @@ Categories Desktop
     Sleep    1s
     Wait Until Element Is Visible    ${category_next_b}    ${timeout}
     Click Element    ${category_next_b}
-    Sleep    1s
     Wait Until Element Is Visible    ${category_13}    ${timeout}
     Click Element    ${category_13}
+    Sleep    1s
+    Wait Until Element Is Visible    ${category_next_b}    ${timeout}
+    Click Element    ${category_next_b}
+    Sleep    1s
+    Wait Until Element Is Visible    ${category_next_b}    ${timeout}
+    Click Element    ${category_next_b}
+    Sleep    1s
+    Wait Until Element Is Visible    ${category_14}    ${timeout}
+    Click Element    ${category_14}
     Sleep    1s
     Wait Until Element Is Visible    ${category_next_b}    ${timeout}
     Click Element    ${category_next_b}

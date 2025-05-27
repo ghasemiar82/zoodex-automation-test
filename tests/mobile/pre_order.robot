@@ -20,6 +20,9 @@ Pre Order Mobile
     Wait Until Element Is Visible    ${pre_order_b}    ${timeout}
     Click Element    ${pre_order_b}
     Sleep    1s
+    Wait Until Element Is Visible    ${pre_order_check_box}    ${timeout}
+    Click Element    ${pre_order_check_box}
+    Sleep    1s
     Wait Until Element Is Visible    ${to_day}    ${timeout}
     Click Element    ${to_day}
     Sleep    1s
@@ -40,8 +43,8 @@ Pre Order Mobile
     Wait Until Element Is Visible    ${kabab_khoran_menu_1}    ${timeout}
     Click Element    ${kabab_khoran_menu_1}
     Sleep    2s
-    Wait Until Element Is Visible    ${chelo_zaferani_+}    ${timeout}
-    Click Element    ${chelo_zaferani_+}
+    Wait Until Element Is Visible    ${m_add_item}    ${timeout}
+    Click Element    ${m_add_item}
     Sleep    1s
     Wait Until Element Is Visible    ${m_cart_b}    ${timeout}
     Click Element    ${m_cart_b}

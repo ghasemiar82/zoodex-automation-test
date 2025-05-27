@@ -17,30 +17,31 @@ Discounts Mobile
     Wait Until Element Is Visible    ${explore}    ${timeout}
     Click Element    ${explore}
     Sleep    5s
-    Wait Until Element Is Visible    //*[@id="discounts"]/div/div[2]/div[2]/section[1]/span    ${timeout}
-    ${discount_code}=    Get Text    //*[@id="discounts"]/div/div[2]/div[2]/section[1]/span
+    Wait Until Element Is Visible    ${tf_discount_code}     ${timeout}
+    ${discount_code}=    Get Text    ${tf_discount_code} 
     Wait Until Element Is Visible    ${discount_vendor}    ${timeout}
     Click Element    ${discount_vendor}
     Sleep    1s
-    Wait Until Element Is Visible    ${menu_div_1}    ${timeout}
-    Click Element    ${menu_div_1}
+    Wait Until Element Is Visible    ${discount_vendor_menu_1}    ${timeout}
+    Click Element    ${discount_vendor_menu_1}
     Sleep    2s
-    Wait Until Element Is Visible    ${add_food_to_cart_for_discount_b}    ${timeout}
-    Click Element    ${add_food_to_cart_for_discount_b}
+    Wait Until Element Is Visible    ${discounted_vendor_add_item}    ${timeout}
+    Click Element    ${discounted_vendor_add_item}
     Sleep    3s
-    ${found}=    Run Keyword And Return Status    Element Should Contain    //*[@id="__nuxt"]/div[15]/div[2]/div/div[1]/p[2]    زمان تحویل
+    ${found}=    Run Keyword And Return Status    Element Should Contain    ${delivery_time}    زمان تحویل
+
     IF    ${found}
-        Wait Until Element Is Visible    //*[@id="__nuxt"]/div[15]/div[2]/div/div[3]/section/div/div[1]    ${timeout}
-        Click Element    //*[@id="__nuxt"]/div[15]/div[2]/div/div[3]/section/div/div[1]
+        Wait Until Element Is Visible    ${to_day}    ${timeout}
+        Click Element    ${to_day}
         Sleep    2s
-        Wait Until Element Is Visible    //*[@id="1404/03/03 19:00:00"]    ${timeout}
-        Click Element    //*[@id="__nuxt"]/div[15]/div[2]/div/div[3]/section[2]/div[2]/div[1]/div/label/span
+        Wait Until Element Is Visible    ${time_1}    ${timeout}
+        Click Element    ${time_1}
         Sleep    2s
-        Wait Until Element Is Visible    //*[@id="__nuxt"]/div[15]/div[2]/div/div[3]/div[2]/button    ${timeout}
-        Click Element    //*[@id="__nuxt"]/div[15]/div[2]/div/div[3]/div[2]/button
+        Wait Until Element Is Visible    ${submit_pre_order_b}    ${timeout}
+        Click Element    ${submit_pre_order_b}
         Sleep    2s
-        Wait Until Element Is Visible    ${add_food_to_cart_for_discount_b}    ${timeout}
-        Click Element    ${add_food_to_cart_for_discount_b}
+        Wait Until Element Is Visible    ${discounted_vendor_add_item}    ${timeout}
+        Click Element    ${discounted_vendor_add_item}
         Sleep    2s
     END
     Wait Until Element Is Visible    ${m_cart_b}    ${timeout}

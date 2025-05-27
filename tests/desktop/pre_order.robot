@@ -18,6 +18,9 @@ Pre Order Desktop
     Wait Until Element Is Visible    ${pre_order_b}    ${timeout}
     Click Element    ${pre_order_b}
     Sleep    1s
+    Wait Until Element Is Visible    ${pre_order_check_box}    ${timeout}
+    Click Element    ${pre_order_check_box}
+    Sleep    1s
     Wait Until Element Is Visible    ${to_day}    ${timeout}
     Click Element    ${to_day}
     Sleep    1s
@@ -38,8 +41,8 @@ Pre Order Desktop
     Wait Until Element Is Visible    ${menu_1}    ${timeout}
     Click Element    ${menu_1}
     Sleep    2s
-    Wait Until Element Is Visible    ${chelo_zaferani_+}    ${timeout}
-    Click Element    ${chelo_zaferani_+}
+    Wait Until Element Is Visible    ${add_item}    ${timeout}
+    Click Element    ${add_item}
     Sleep    1s
     Wait Until Element Is Visible    ${cart_b}    ${timeout}
     Click Element    ${cart_b}

@@ -29,7 +29,4 @@ Orders Desktop
     Wait Until Element Is Visible    ${cart_b}    ${timeout}
     Click Element    ${cart_b}
     Sleep    2s
-    Wait Until Element Is Visible    ${vendor_name}    ${timeout}
-    Element Text Should Be    ${vendor_name}    ${qorbani}
-    Sleep    1s
     

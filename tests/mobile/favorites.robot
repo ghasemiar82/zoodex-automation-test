@@ -31,8 +31,8 @@ Favorites Mobile
     Wait Until Element Is Visible    ${like_product}    ${timeout}
     Click Element    ${like_product}
     Sleep    2s
-    Wait Until Element Is Visible    ${close_modal}    ${timeout}
-    Click Element    ${close_modal}
+    Wait Until Element Is Visible    ${product_details_close}    ${timeout}
+    Click Element    ${product_details_close}
     Sleep    1s
     Wait Until Element Is Visible    ${profile}    ${timeout}
     Click Element    ${profile}

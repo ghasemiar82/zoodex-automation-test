@@ -33,8 +33,8 @@ Go To Zoodex Mobile
     
 Close Desktop Modal
     [Documentation]    Dismiss any modal or popup that appears on the homepage
-    Wait Until Element Is Visible    ${close_modal_b}    ${timeout}
-    Click Element    ${close_modal_b}
+    Wait Until Element Is Visible    ${close_dialog}    ${timeout}
+    Click Element    ${close_dialog}
 
 Close Mobile Modal
     [Documentation]    Dismiss any modal or popup that appears on the mobile homepage

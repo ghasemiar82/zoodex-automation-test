@@ -10,6 +10,7 @@ Suite Teardown    Close All Browsers
 *** Test Cases ***
 Orders Desktop
     Close Desktop Modal
+    Select Location Desktop
     Wait Until Element Is Visible    ${search_bar}    ${timeout}
     Input Text    ${search_bar}    ${search_word}
     Sleep    3s

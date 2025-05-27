@@ -12,32 +12,32 @@ Discounts Desktop
     Sleep     3s
     Close Desktop Modal
     Login User desktop
-    Sleep    15s
-    Execute Javascript    window.scrollBy(0, 600)
-    ${discount_code}=    Get Text    //*[@id="__nuxt"]/div[2]/div/section[3]/div[3]/div[2]/div/div[2]/div/div/div[1]/div/section[1]/span
+    Execute Javascript    window.scrollBy(0, 1000)
+    ${discount_code}=    Get Text    ${tf_discount_code}
     Sleep    1s
     Wait Until Element Is Visible    ${discount_vendor}    ${timeout}
     Click Element    ${discount_vendor}
     Sleep    1s
-    Wait Until Element Is Visible    ${menu_1}    ${timeout}
-    Click Element    ${menu_1}
+    Wait Until Element Is Visible    ${discounted_vendor_menu}    ${timeout}
+    Click Element    ${discounted_vendor_menu}
     Sleep    2s
-    Wait Until Element Is Visible    ${add_food_to_cart_for_discount_b}    ${timeout}
-    Click Element    ${add_food_to_cart_for_discount_b}
+    Wait Until Element Is Visible    ${discounted_vendor_add_item}    ${timeout}
+    Click Element    ${discounted_vendor_add_item}
     Sleep    2s
 
-    ${found}=    Run Keyword And Return Status    Element Should Contain    //*[@id="__nuxt"]/div[4]/div/div[1]/p[2]    زمان تحویل
+    ${found}=    Run Keyword And Return Status    Element Should Contain    ${delivery_time}    زمان تحویل
 
     IF    ${found}
-        Wait Until Element Is Visible    //*[@id="1404/03/03 19:00:00"]    ${timeout}
-        Click Element    //*[@id="__nuxt"]/div[4]/div/section[2]/div[2]/div[1]/div/label/span
+        Wait Until Element Is Visible    ${time_1}    ${timeout}
+        Click Element    ${time_1}
         Sleep    2s
         
-        Wait Until Element Is Visible    //*[@id="__nuxt"]/div[4]/div/div[4]/button    ${timeout}
-        Click Element    //*[@id="__nuxt"]/div[4]/div/div[4]/button
+        Wait Until Element Is Visible    ${submit_pre_order_b}    ${timeout}
+        Click Element    ${submit_pre_order_b}
         Sleep    2s
-        Wait Until Element Is Visible    ${add_food_to_cart_for_discount_b}    ${timeout}
-        Click Element    ${add_food_to_cart_for_discount_b}
+
+        Wait Until Element Is Visible    ${discounted_vendor_add_item}    ${timeout}
+        Click Element    ${discounted_vendor_add_item}
         Sleep    2s
     END
     Wait Until Element Is Visible    ${cart_b}    ${timeout}
