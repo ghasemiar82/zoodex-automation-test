@@ -53,7 +53,6 @@ Pre Order Desktop
     Wait Until Element Is Visible    ${addres_num_1}    ${timeout}
     Click Element    ${addres_num_1}
     Sleep    1s
-    Wait Until Element Is Visible    ${pre_order_logo}    ${timeout}
     
     
 

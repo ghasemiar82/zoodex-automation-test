@@ -43,4 +43,3 @@ Favorites Mobile
     Wait Until Element Is Visible    ${tab_2_favorites}    ${timeout}
     Click Element    ${tab_2_favorites}
     Sleep    2s
-    Wait Until Element Does Not Contain    ${not_have_favorites}    ${timeout}

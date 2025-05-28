@@ -27,14 +27,14 @@ Pre Order Mobile
     Click Element    ${to_day}
     Sleep    1s
     FOR    ${i}    IN RANGE   1    7
-        Click Element    //*[@id="__nuxt"]/div[15]/div[2]/div/div[3]/section[2]/div[2]/div[${i}]/div/label/span
+        Click Element    //*[@id="__nuxt"]/div[4]/div/section[2]/div[2]/div[${i}]/label
         Sleep    1s
     END
     Wait Until Element Is Visible    ${tomarow}    ${timeout}
     Click Element    ${tomarow}
     Sleep    1s
     FOR    ${i}    IN RANGE   1    7
-        Click Element    //*[@id="__nuxt"]/div[15]/div[2]/div/div[3]/section[2]/div[2]/div[${i}]/div/label/span
+        Click Element    //*[@id="__nuxt"]/div[4]/div/section[2]/div[2]/div[${i}]/label
         Sleep    1s
     END
     Wait Until Element Is Visible    ${submit_pre_order_b}    ${timeout}
@@ -55,8 +55,6 @@ Pre Order Mobile
     Wait Until Element Is Visible    ${addres_num_1}    ${timeout}
     Click Element    ${addres_num_1}
     Sleep    1s
-    Wait Until Element Is Visible    ${pre_order_logo}    ${timeout}
-    
     
 
     

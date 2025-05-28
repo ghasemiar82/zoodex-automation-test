@@ -20,6 +20,21 @@ shopping Cart Desktop
     Wait Until Element Is Visible    ${add_item}    ${timeout}
     Click Element    ${add_item}
     Sleep    2s
+    ${found}=    Run Keyword And Return Status    Element Should Contain    ${delivery_time}    زمان تحویل
+
+    IF    ${found}
+        Wait Until Element Is Visible    ${time_1}    ${timeout}
+        Click Element    ${time_1}
+        Sleep    2s
+        
+        Wait Until Element Is Visible    ${submit_pre_order_b}    ${timeout}
+        Click Element    ${submit_pre_order_b}
+        Sleep    2s
+
+        Wait Until Element Is Visible    ${add_item}    ${timeout}
+        Click Element    ${add_item}
+        Sleep    2s
+    END
     Wait Until Element Is Visible    ${cart_b}    ${timeout}
     Click Element    ${cart_b}
     Wait Until Element Is Visible    ${food_num}

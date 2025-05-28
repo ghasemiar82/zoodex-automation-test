@@ -8,9 +8,9 @@ ${m_tf_phone_number}    id=شماره همراه
 ${m_submit_login_b}    id=login-submit
 ${m_category_1}    id=home-vendor-type-resturant
 ${m_menu_1}    id=nav-20833
-${m_add_item}    id=product-add-50682id=
+${m_add_item}    //*[@id="product-0"]/div[2]/div[2]/div[1]
 ${m_cart_b}    id=cart-icon
-${m_food_num}    //*[@id="vendors"]/div/div[2]/div[3]/div/div[2]/div[2]/div/span
+${m_food_num}    id=product-count-50682
 ${category_2}    id=home-vendor-type-fastfood
 ${category_3}    id=home-vendor-type-supermarket
 ${category_4}    id=home-vendor-type-cafe
@@ -30,19 +30,19 @@ ${orders_b}    id=order
 ${see_order_b}    id=order-index-see-order-4791066
 ${order_again_b}    id=order-index-order-again-4791066
 ${explore}    id=explore
-${discount_vendor}    //*[@id="offer-code-vendor-pizzaman"]/div/img
-${discount_vendor_menu_1}    id=nav-12291
-${tf_discount_code}    //*[@id="discounts"]/div/div[2]/div[2]/section[1]/span
-${add_food_to_cart_for_discount_b}    id=product-add-189956
-${delivery_time}    //*[@id="__nuxt"]/div[15]/div[2]/div/div[1]/p[2]
-${time_1}    id=1404/03/06 19:00:00
-${continue_shoping}    id=go-to-checkouid=t
+${discount_vendor}    //*[@id="offer-code-vendor-fastfoodnamak"]/div/img
+${discount_vendor_menu_1}    id=nav-55781
+${tf_discount_code}    //*[@id="discount-0"]/section[1]/span
+${add_food_to_cart_for_discount_b}    //*[@id="product-0"]/div[2]/div[2]/div[1]
+${delivery_time}    id=modal-title
+${time_1}    //*[@id="__nuxt"]/div[15]/div[2]/div/div[3]/section[2]/div[2]/div[1]/label
+${continue_shoping}    id=go-to-checkout
 ${addres_num_1}    id=659093
-${tf_discount}    //*[@id="__nuxt"]/section[3]/div[5]/div/input
-${enter_discount}    //*[@id="__nuxt"]/section[3]/div[5]/div/button
+${tf_discount}    id=checkout-off-code-input
+${enter_discount}    id=checkout-off-code-submit
 ${kabab_khoran}    id=specials-0
 ${like}    id=vendor-like
-${chelo_zaferani}    id=img-50682
+${chelo_zaferani}    id=product-0
 ${like_product}    //*[@id="`product-like`"]/img
 ${product_details_close}    id=product-details-close
 ${favorites}    id=profile-item-prime-heart
@@ -51,47 +51,46 @@ ${kabab_khoran_menu_1}    id=nav-20833
 ${pre_order_b}    id=open-preorder
 ${to_day}    id=today-preorder
 ${tomarow}    id=tomorrow-preorder
-${submit_pre_order_b}    //*[@id="__nuxt"]/div[15]/div[2]/div/div[3]/div[2]/button
-${pre_order_logo}    //*[@id="__nuxt"]/section[2]/div[2]/div[2]/div[1]/img
-${filter_best_selling}    //*[@id="__nuxt"]/div[2]/div[1]/div[13]/div[2]/div[3]
-${filter_new}    //*[@id="__nuxt"]/div[2]/div[1]/div[13]/div[2]/div[2]
-${discounted}    //*[@id="__nuxt"]/div[2]/div[1]/div[13]/div[2]/div[1]
-${all_filters}    //*[@id="__nuxt"]/div[2]/div[1]/div[13]/div[1]/div/img
-${discounted_b}    //*[@id="__nuxt"]/div[2]/div[1]/div[15]/div[2]/div/div[3]/div[2]/div[1]/label/div
-${filter_new_b}    //*[@id="__nuxt"]/div[2]/div[1]/div[15]/div[2]/div/div[3]/div[3]/div[1]/label/div
-${filter_best_selling_b}    //*[@id="__nuxt"]/div[2]/div[1]/div[15]/div[2]/div/div[3]/div[4]/div/label/div
-${delete_all_filters_b}    //*[@id="__nuxt"]/div[2]/div[1]/div[15]/div[2]/div/div[3]/div[5]/button[2]
+${submit_pre_order_b}    id=submit-preorder
+${filter_best_selling}    id=vendor-details-filter-popular
+${filter_new}    id=vendor-details-filter-new
+${discounted}    id=vendor-details-filter-offers
 ${search_bar}    id=home-search
 ${search_bar_2}    //*[@id="undefined"]
 ${search_word}    پیتزا
-${first_search_result}    //*[@id="__nuxt"]/div[2]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div[2]/a/div/img
+${first_search_result}    id=search-vendor-0
 ${back_to_search}    id=vendor-details-go-back
 ${search_word_2}    پیتزا سیر استیک
-${first_search_result_2}    id=img-79360
+${first_search_result_2}    id=search-product-0
 ${continue_order_b}    id=product-details-continue
 ${personal_info}    id=profile-item-prime-user
 ${edit_personal_info}    id=home-button-edit-profile
 ${tf_full_name}    id=نام و نام خانوادگی
+${name}    متین رمضانی کریم
 ${tf_national_code}    id=کد ملی
+${national_code}    2981441922
 ${tf_email}    id=پست الکترونیک
-${birth_date}    id=تاریخ تولد
+${email}    matin007.rk@gmail.com
+${birth_date}    id=birth_date
 ${day_1}    id=day-1
 ${submit_personal_info_b}    //*[@id="__nuxt"]/section/form/div[2]/button
-${personal_bank_info}    id=home-button-edit-card
-${tf_full_name_bank}    id=full_name
+${edit_personal_bank_info}    id=home-button-edit-card
+${tf_full_name_bank}    id=نام
 ${tf_card_number}    id=شماره کارت
 ${tf_shaba}    id=شماره شبا
+${card_num}    5041721237791521
+${shaba_num}   550700010001113123044001
 ${submit_bank_info}    //*[@id="__nuxt"]/section/form/div[2]/button
 ${address}    id=profile-item-prime-pin
 ${add_address_b}    //*[@id="__nuxt"]/div[3]/div/section[2]/button
 ${tf_address_title}    id=address-title
 ${address_title}    test
-${submit_address_b}    //*[@id="__nuxt"]/div[6]/div[2]/div/div[3]/div/section[3]/button[1]
-${edit_address}    //*[@id="__nuxt"]/div[3]/div/section[1]/div[1]/section[1]/div[2]/img[1]
-${address_delete}    //*[@id="__nuxt"]/div[3]/div/section[1]/div[1]/section[1]/div[2]/img[2]
+${submit_address_b}    id=submit-address
+${address_delete}    id=address-delete-671723
+${delete_address_confirm}    id=delete-address-confirm
 ${discounts}    id=profile-item-prime-discount
 ${feedbacks}    id=profile-item-prime-comments
-${credits}    id=profile-menu-prime-group
+${credits}    id=profile-item-prime-group
 ${increase_credit_b}    //*[@id="__nuxt"]/div[2]/div[1]/section[1]/div/button
 ${tf_price}    id=price-input
 ${price}    225000
@@ -104,10 +103,8 @@ ${price_4}    id=price-50000
 ${price_5}    id=price-100000
 ${price_6}    id=price-200000
 ${close_dialog}    id=close-dialog
-${credit_back_b}    //*[@id="__nuxt"]/div[2]/div[1]/section[1]/button
+${credit_back_b}    id=cashback-request
 ${tf_price_credit_back}    //*[@id="undefined"]
-${transactions}    //*[@id="__nuxt"]/div[2]/div[1]/section[2]/button[2]
-${transactions_back}    //*[@id="__nuxt"]/div[2]/div/div[3]/div/div[2]/section/div[1]/div[1]/img
 ${tickets}    id=profile-item-prime-ticket
 ${new_ticket}    id=create-new-ticket
 ${op1}    id=ticket-type-258
@@ -117,11 +114,9 @@ ${tf_ticket}    id=ticket-description
 ${ticket_text}    تست
 ${invite}    id=profile-item-prime-gift
 ${discounted_vendor_menu}    id=cat-12291
-${discounted_vendor_add_item}    id=product-add-189956
+${discounted_vendor_add_item}    //*[@id="product-0"]/div[2]/div[2]/div[1]
 ${profile}    id=profile
 ${pre_order_check_box}    //*[@id="__nuxt"]/div[15]/div[2]/div/div[3]/div[1]/div[2]/label[2]
-${first_search_result_2}    //*[@id="img-817108"]/img
-${continue_order_b}    //*[@id="product-detail-back"]/div/div/div[2]/button
 
 #    added by ghasemi
 ${kabab_khoran_search_b}    //*[@id="__nuxt"]/div[2]/div[1]/div[10]/div[1]/img

@@ -8,7 +8,7 @@ Test Teardown     Capture Page Screenshot
 Suite Teardown    Close All Browsers
 
 *** Test Cases ***
-shopping Cart Desktop
+Shopping Cart Mobile
     Close Mobile Modal
     Execute Javascript    window.scrollBy(0, 500)
     Wait Until Element Is Visible    ${kabab_khoran}    ${timeout}
@@ -20,6 +20,21 @@ shopping Cart Desktop
     Wait Until Element Is Visible    ${m_add_item}    ${timeout}
     Click Element    ${m_add_item}
     Sleep    2s
+    ${found}=    Run Keyword And Return Status    Element Should Contain    ${delivery_time}    زمان تحویل
+
+    IF    ${found}
+        Wait Until Element Is Visible    ${time_1}    ${timeout}
+        Click Element    ${time_1}
+        Sleep    2s
+        
+        Wait Until Element Is Visible    ${submit_pre_order_b}    ${timeout}
+        Click Element    ${submit_pre_order_b}
+        Sleep    2s
+
+        Wait Until Element Is Visible    ${m_add_item}    ${timeout}
+        Click Element    ${m_add_item}
+        Sleep    2s
+    END
     Wait Until Element Is Visible    ${m_cart_b}    ${timeout}
     Click Element    ${m_cart_b}
     Wait Until Element Is Visible    ${m_food_num}

@@ -24,19 +24,13 @@ Vendor Menu Filters Desktop
     Wait Until Element Is Visible    ${discounted}    ${timeout}
     Click Element    ${discounted}
     Sleep    1s
-    Wait Until Element Is Visible    ${all_filters}    ${timeout}
-    Click Element    ${all_filters}
-    Sleep    1s
-    Wait Until Element Is Visible    ${discounted_b}    ${timeout}
-    Click Element    ${discounted_b}
-    Sleep    1s
-    Wait Until Element Is Visible    ${filter_new_b}    ${timeout}
-    Click Element    ${filter_new_b}
-    Sleep    1s
-    Wait Until Element Is Visible    ${filter_best_selling_b}    ${timeout}
-    Click Element    ${filter_best_selling_b}
-    Sleep    1s
-    Wait Until Element Is Visible    ${delete_all_filters_b}    ${timeout}
-    Click Element    ${delete_all_filters_b}
-    Sleep    1s
     Wait Until Element Is Visible    ${filter_best_selling}    ${timeout}
+    Click Element    ${filter_best_selling}
+    Sleep    1s
+    Wait Until Element Is Visible    ${filter_new}    ${timeout}
+    Click Element    ${filter_new}
+    Sleep    1s
+    Wait Until Element Is Visible    ${discounted}    ${timeout}
+    Click Element    ${discounted}
+    Sleep    1s
+    

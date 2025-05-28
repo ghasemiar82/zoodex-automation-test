@@ -17,6 +17,7 @@ Orders Mobile
     Wait Until Element Is Visible    ${orders_b}    ${timeout}
     Click Element    ${orders_b}
     Sleep    1s
+    Execute Javascript    window.scrollBy(0, 200)
     Wait Until Element Is Visible    ${see_order_b}    ${timeout}
     Click Element    ${see_order_b}
     Sleep    1s

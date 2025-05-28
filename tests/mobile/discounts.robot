@@ -4,7 +4,7 @@ Resource          ../variables/mobile_variables.robot
 Resource          ../resources/common.robot
 Suite Setup       Initialize Mobile Browser   
 Test Setup        Go To Zoodex Mobile        
-Test Teardown     Capture Page Screenshot  
+Test Teardown     Capture Page Screenshot 
 Suite Teardown    Close All Browsers
 
 *** Test Cases ***
@@ -24,7 +24,7 @@ Discounts Mobile
     Sleep    1s
     Wait Until Element Is Visible    ${discount_vendor_menu_1}    ${timeout}
     Click Element    ${discount_vendor_menu_1}
-    Sleep    2s
+    Sleep    3s
     Wait Until Element Is Visible    ${discounted_vendor_add_item}    ${timeout}
     Click Element    ${discounted_vendor_add_item}
     Sleep    3s
@@ -36,10 +36,10 @@ Discounts Mobile
         Sleep    2s
         Wait Until Element Is Visible    ${time_1}    ${timeout}
         Click Element    ${time_1}
-        Sleep    2s
+        Sleep    3s
         Wait Until Element Is Visible    ${submit_pre_order_b}    ${timeout}
         Click Element    ${submit_pre_order_b}
-        Sleep    2s
+        Sleep    3s
         Wait Until Element Is Visible    ${discounted_vendor_add_item}    ${timeout}
         Click Element    ${discounted_vendor_add_item}
         Sleep    2s
