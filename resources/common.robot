@@ -10,7 +10,6 @@ Initialize Browser
     Maximize Browser Window
     Set Selenium Speed    0.2s
 
-*** Keywords ***
 Initialize Mobile Browser
     ${mobile_emulation}    Create Dictionary    deviceName    Pixel 2
     ${options}    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys,selenium.webdriver
@@ -33,44 +32,74 @@ Go To Zoodex Mobile
     
 Close Desktop Modal
     [Documentation]    Dismiss any modal or popup that appears on the homepage
-    Wait Until Element Is Visible    ${close_dialog}    ${timeout}
-    Click Element    ${close_dialog}
+    Click Element When Ready    ${close_dialog}
 
 Close Mobile Modal
     [Documentation]    Dismiss any modal or popup that appears on the mobile homepage
-    Wait Until Element Is Visible    ${m_close_modal_b}    ${timeout}
-    Click Element    ${m_close_modal_b}
+    Sleep    3s
+    Click Element When Ready    ${m_close_modal_b}
 
 Select Location Desktop
-    [Documentation]    Select location on map
-    Wait Until Element Is Visible     ${location_b}
-    Click Element    ${location_b}
-    Wait Until Element Is Visible    ${submit_location_b}    ${timeout}
-    Sleep    2s
-    Click Button    ${submit_location_b}
+    [Documentation]    Selects the location on the map and submits it.
+    Sleep    3s
+    Click Element When Ready    ${location_b}
+    Click Element When Ready    ${submit_location_b}
 
 Select Location Mobile
-    [Documentation]    Select location on map
-    Wait Until Element Is Visible     ${m_location_b}
-    Click Element    ${m_location_b}
-    Wait Until Element Is Visible    ${m_submit_location_b}    ${timeout}
-    Sleep    2s
-    Click Button    ${m_submit_location_b}
+    [Documentation]    Selects the location on the map and submits it.
+    Click Element When Ready    ${m_location_b}
+    Click Element When Ready    ${m_submit_location_b}
 
 Login User desktop
-    [Documentation]    user login process
-    Wait Until Element Is Visible    ${login_B}    ${timeout}
-    Click Element    ${login_B}
+    [Documentation]    Handles the user login process efficiently and reliably.
+
+    Click Element When Ready    ${login_B}
     Wait Until Element Is Visible    ${tf_phone_number}    ${timeout}
     Input Text    ${tf_phone_number}    ${PHONE_NUMBER}
-    Wait Until Element Is Visible    ${submit_login_b}    ${timeout}
-    Click Element    ${submit_login_b}
-    Sleep    15s
+    Click Element When Ready    ${submit_login_b}
+    Sleep    3s
+    Wait Until Element Is Visible    ${tf_otp}    ${timeout}
+    Sleep    2s
+    Input Text    ${tf_otp_2}    ${code}
+
+    Wait Until Element Is Visible    ${category_1}    ${timeout}
+
+Click Element When Ready
+    [Documentation]    Waits for an element to be visible and enabled, then clicks it.
+    [Arguments]    ${locator}
+
+    Wait Until Element Is Visible    ${locator}    ${timeout}
+    Wait Until Element Is Enabled    ${locator}    ${timeout}
+    Click Element    ${locator}
 
 Login User Mobile
-    [Documentation]    user login process
+    [Documentation]    Handles the mobile user login process reliably.
+
+    Click Element When Ready    ${m_login_B}
+    
     Wait Until Element Is Visible    ${m_tf_phone_number}    ${timeout}
     Input Text    ${m_tf_phone_number}    ${PHONE_NUMBER}
-    Wait Until Element Is Visible    ${m_submit_login_b}    ${timeout}
-    Click Element    ${m_submit_login_b}
-    Sleep    15s
+    
+    Click Element When Ready    ${m_submit_login_b}
+    Sleep    3s
+    Wait Until Element Is Visible    ${m_tf_otp}    ${timeout}
+    Sleep    2s
+    Input Password    ${m_tf_otp_2}    ${code}
+
+    Wait Until Element Is Visible    ${m_category_1}    ${timeout}
+
+Scroll Down Smoothly
+    [Documentation]    Scrolls the page down smoothly over a given duration.
+    [Arguments]    ${total_duration_seconds}=3    ${scroll_steps}=30
+
+    ${page_height}=    Execute Javascript    return document.body.scrollHeight;
+
+    ${scroll_increment}=    Evaluate    ${page_height} / ${scroll_steps}
+    ${delay_between_steps}=    Evaluate    ${total_duration_seconds} / ${scroll_steps}
+
+    Log To Console    Scrolling down ${page_height} pixels in ${scroll_steps} steps.
+
+    FOR    ${i}    IN RANGE    ${scroll_steps}
+        Execute Javascript    window.scrollBy(0, ${scroll_increment});
+        Sleep    ${delay_between_steps}s
+    END

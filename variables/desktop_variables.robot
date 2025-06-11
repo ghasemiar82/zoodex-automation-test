@@ -1,9 +1,10 @@
 *** Variables ***
-${logo}    id=header-desktop
+${logo}    //*[@id="header-desktop"]/div/section/div/section[1]/a/img
 ${location_b}    id=header-address
 ${submit_location_b}    id=select-location-submit
 ${login_B}    id=header-login
 ${tf_phone_number}    id=شماره همراه
+${tf_code}    //*[@id="__nuxt"]/div[2]/div/div[3]/div/form/div/div[1]/div/input
 ${submit_login_b}    id=login-submit
 ${category_1}    id=vendor-type-resturant
 ${menu_1}    id=cat-0
@@ -29,14 +30,14 @@ ${orders_b}    css:[data-test-id="orders-btn"]
 ${see_order_b}    id=order-index-see-order-4791066
 ${order_again_b}    id=order-index-order-again-4791066
 ${see_order_back}    id=order-details-go-back
-${discount_vendor}    //*[@id="offer-code-vendor-fastfoodnamak"]/div/img
+${discount_vendor}    //*[@id="offer-code-vendor-kafishaprango"]/div/span
 ${discount_vendor_menu_1}    id=cat-0
 ${add_food_to_cart_for_discount_b}    //*[@id="product-0"]/div[2]/div[2]/div[1]
-${delivery_time}    dialog-title
+${delivery_time}    id=dialog-title
 ${time_1}    //*[@id="__nuxt"]/div[4]/div/section[2]/div[2]/div[1]/label
 ${tf_discount_code}    //*[@id="discount-0"]/section[1]/span
 ${continue_shoping}    id=go-to-checkout
-${addres_num_1}    id=659093
+${addres_num_1}    id=679701
 ${tf_discount}    id=checkout-off-code-input
 ${enter_discount}    id=checkout-off-code-submit
 ${kabab_khoran}    id=specials-0
@@ -58,7 +59,7 @@ ${search_bar}    id=search-desktop
 ${search_word}    پیتزا
 ${first_search_result}    id=search-vendors-0
 ${search_word_2}    پیتزا سیر استیک
-${first_search_result_2}    id=search-products-0
+${first_search_result_2}    //*[@id="img-817108"]/img
 ${continue_order_b}    id=product-details-continue
 ${clear_text_b}    //*[@id="header-desktop"]/div/section/div/section[2]/div[2]/div[1]/img
 ${edit_personal_info}    id=edit-personal-info
@@ -115,3 +116,9 @@ ${discounted_vendor_add_item}    //*[@id="product-0"]/div[2]/div[2]/div[1]
 ${pre_order_check_box}    //*[@id="__nuxt"]/div[4]/div/div[3]/div[2]/label[1]/span
 ${kabab_khoran_search_input}    //*[@id="__nuxt"]/div[2]/div/div[4]/div[1]/div[1]/input
 ${kabab_khoran_search_text}    کباب
+${tf_otp}    //*[@id="__nuxt"]/div[2]/div/div[3]/div/form/div/div[1]/div/div[1]
+${tf_otp_2}    //*[@id="__nuxt"]/div[2]/div/div[3]/div/form/div/div[1]/div/input
+${cart_trash}    id=cart-trash
+${delete_all_cart}    //*[@id="__nuxt"]/div[4]/div/div[3]/span
+${bad_weather}    //*[@id="__nuxt"]/div[2]/div/div[4]/div/div[2]/button
+${like_none}    //*[@id="__nuxt"]/div[2]/div/div[3]/div/div[2]/section/div/span

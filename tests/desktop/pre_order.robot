@@ -1,7 +1,7 @@
 *** Settings ***
 Library           SeleniumLibrary
-Resource          ../variables/desktop_variables.robot
-Resource          ../resources/common.robot
+Resource          ../../variables/desktop_variables.robot
+Resource          ../../resources/common.robot
 Suite Setup       Initialize Browser   
 Test Setup        Go To Zoodex         
 Test Teardown     Capture Page Screenshot  
@@ -11,50 +11,29 @@ Suite Teardown    Close All Browsers
 Pre Order Desktop
     Close Desktop Modal
     Login User desktop
-    Execute Javascript    window.scrollBy(0, 500)
-    Wait Until Element Is Visible    ${kabab_khoran}    ${timeout}
-    Click Element    ${kabab_khoran}
-    Sleep    1s
-    Wait Until Element Is Visible    ${pre_order_b}    ${timeout}
-    Click Element    ${pre_order_b}
-    Sleep    1s
-    Wait Until Element Is Visible    ${pre_order_check_box}    ${timeout}
-    Click Element    ${pre_order_check_box}
-    Sleep    1s
-    Wait Until Element Is Visible    ${to_day}    ${timeout}
-    Click Element    ${to_day}
-    Sleep    1s
-    FOR    ${i}    IN RANGE   1    4
-        Click Element    //*[@id="__nuxt"]/div[4]/div/section[2]/div[2]/div[${i}]/div/label/span
-        Sleep    1s
-    END
-    Wait Until Element Is Visible    ${tomarow}    ${timeout}
-    Click Element    ${tomarow}
-    Sleep    1s
-    FOR    ${i}    IN RANGE   1    4
-        Click Element    //*[@id="__nuxt"]/div[4]/div/section[2]/div[2]/div[${i}]/div/label/span
-        Sleep    1s
-    END
-    Wait Until Element Is Visible    ${submit_pre_order_b}    ${timeout}
-    Click Element    ${submit_pre_order_b}
-    Sleep    1s
-    Wait Until Element Is Visible    ${menu_1}    ${timeout}
-    Click Element    ${menu_1}
-    Sleep    2s
-    Wait Until Element Is Visible    ${add_item}    ${timeout}
-    Click Element    ${add_item}
-    Sleep    1s
-    Wait Until Element Is Visible    ${cart_b}    ${timeout}
-    Click Element    ${cart_b}
-    Sleep    1s
-    Wait Until Element Is Visible    ${continue_shoping}    ${timeout}
-    Click Element    ${continue_shoping}
-    Sleep    2s
-    Wait Until Element Is Visible    ${addres_num_1}    ${timeout}
-    Click Element    ${addres_num_1}
-    Sleep    1s
     
-    
+    Scroll Element Into View    ${kabab_khoran}
+    Click Element When Ready    ${kabab_khoran}
+    Click Element When Ready    ${pre_order_b}
+    Click Element When Ready    ${pre_order_check_box}
 
-    
-    
+    Click Element When Ready    ${to_day}
+    Select Available Time Slots
+
+    Click Element When Ready    ${tomarow}
+    Select Available Time Slots
+
+    Click Element When Ready    ${submit_pre_order_b}
+    Click Element When Ready    ${menu_1}
+    Click Element When Ready    ${add_item}
+    Click Element When Ready    ${cart_b}
+    Click Element When Ready    ${continue_shoping}
+    Click Element When Ready    ${addres_num_1}
+    Click Element When Ready    ${cart_trash}
+    Click Element When Ready    ${delete_all_cart}
+*** Keywords ***
+Select Available Time Slots
+    [Documentation]    Clicks on a series of available time slots inside a loop.
+    FOR    ${i}    IN RANGE    1    4
+        Click Element    //*[@id="__nuxt"]/div[4]/div/section[2]/div[2]/div[${i}]/div/label/span
+    END

@@ -1,58 +1,47 @@
 *** Settings ***
 Library           SeleniumLibrary
-Resource          ../variables/desktop_variables.robot
-Resource          ../resources/common.robot
-Suite Setup       Initialize Browser   
-Test Setup        Go To Zoodex         
-Test Teardown     Capture Page Screenshot  
+Resource          ../../variables/desktop_variables.robot
+Resource          ../../resources/common.robot
+Suite Setup       Initialize Browser
+Test Setup        Go To Zoodex
+Test Teardown     Capture Page Screenshot
 Suite Teardown    Close All Browsers
 
 *** Test Cases ***
 Discounts Desktop
-    Sleep     3s
     Close Desktop Modal
     Login User desktop
-    Execute Javascript    window.scrollBy(0, 1000)
+    
+    Scroll Element Into View    ${discount_vendor}
+    Wait Until Element Is Visible    ${tf_discount_code}    ${timeout}
     ${discount_code}=    Get Text    ${tf_discount_code}
-    Sleep    1s
-    Wait Until Element Is Visible    ${discount_vendor}    ${timeout}
-    Click Element    ${discount_vendor}
-    Sleep    1s
-    Wait Until Element Is Visible    ${discounted_vendor_menu}    ${timeout}
-    Click Element    ${discounted_vendor_menu}
-    Sleep    2s
-    Wait Until Element Is Visible    ${discounted_vendor_add_item}    ${timeout}
-    Click Element    ${discounted_vendor_add_item}
-    Sleep    2s
+    
+    Click Element When Ready    ${discount_vendor}
+    Click Element When Ready    ${discounted_vendor_menu}
+    Click Element When Ready    ${discounted_vendor_add_item}
 
     ${found}=    Run Keyword And Return Status    Element Should Contain    ${delivery_time}    زمان تحویل
 
     IF    ${found}
-        Wait Until Element Is Visible    ${time_1}    ${timeout}
-        Click Element    ${time_1}
-        Sleep    2s
-        
-        Wait Until Element Is Visible    ${submit_pre_order_b}    ${timeout}
-        Click Element    ${submit_pre_order_b}
-        Sleep    2s
-
-        Wait Until Element Is Visible    ${discounted_vendor_add_item}    ${timeout}
-        Click Element    ${discounted_vendor_add_item}
-        Sleep    2s
+        Click Element When Ready    ${time_1}
+        Click Element When Ready    ${submit_pre_order_b}
     END
-    Wait Until Element Is Visible    ${cart_b}    ${timeout}
-    Click Element    ${cart_b}
-    Sleep    2s
-    Wait Until Element Is Visible    ${continue_shoping}    ${timeout}
-    Click Element    ${continue_shoping}
-    Sleep    1s
-    Wait Until Element Is Visible    ${addres_num_1}    ${timeout}
-    Click Element    ${addres_num_1}
-    Sleep    2s
-    Execute Javascript    window.scrollBy(0, 600)
+    
+    Click Element When Ready    ${cart_b}
+    Click Element When Ready    ${continue_shoping}
+    Click Element When Ready    ${addres_num_1}
+    
+    ${found2}=    Run Keyword And Return Status    Element Should Be Visible    ${bad_weather}    ${timeout}
+
+    IF    ${found2}
+        Click Element When Ready    ${bad_weather}
+    END
+    
+    Scroll Element Into View    ${tf_discount}
     Wait Until Element Is Visible    ${tf_discount}    ${timeout}
     Input Text    ${tf_discount}    ${discount_code}
-    Sleep    1s
-    Wait Until Element Is Visible    ${enter_discount}    ${timeout}
-    Click Element    ${enter_discount}
-    Sleep    3s
+    
+    Click Element When Ready    ${enter_discount}
+    Click Element When Ready    ${cart_trash}
+    Click Element When Ready    ${delete_all_cart}
+
